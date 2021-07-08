@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 375px)"
+      href="mobile.css"
+    />
+    <title>Weather Report</title>
+    <style>
+      /* Setting temperature font size */
+      #temp p:first-child {
+        font-size: 80px;
+      }
+
+      .whole {
+        background: url('./billy-huynh-v9bnfMCyKbg-unsplash.jpg') no-repeat
+          center center/cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <!-- Whole content -->
+        <div class="col-8 offset-2 whole">
+          <div class="row">
+            <!-- Left content -->
+            <div class="col-sm-4">
+              <!-- Search option -->
+              <div class="input-group mb-3 mt-5 w-100">
+                <div class="input-group-prepend">
+                  <button class="btn btn-outline-secondary" type="button">
+                    <i class="fas fa-search"></i>
+                  </button>
+                </div>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder=""
+                  aria-label=""
+                  aria-describedby="basic-addon1"
+                  id="city-search"
+                />
+              </div>
+              <!-- climate icon -->
+              <div id="climate-icon1" class="mb-5 mt-5 ml-5">
+                <!-- <i class="fas fa-cloud-rain fa-6x"></i> -->
+              </div>
+              <!-- degree, day, climate type -->
+              <div class="mb-5">
+                <div id="temp" class="ml-3"></div>
+                <div id="weather"></div>
+                <br />
+                <div id="city"></div>
+              </div>
+            </div>
+            <!-- Right content -->
+            <div class="col-sm-8 order-2">
+              <!-- Top two cards -->
+              <div class="d-lg-flex mt-5 top-cards">
+                <div
+                  class="card ml-4 mt-5 bg-light border-dark mx-auto"
+                  style="width: 12rem"
+                >
+                  <div class="card-body">
+                    <h5 class="card-title mb-4 text-center text-secondary">
+                      SUNRISE& SUNSET
+                    </h5>
+                    <div class="sunrise font-weight-bold text-center h5"></div>
+                    <br />
+                    <div class="sunset font-weight-bold text-center h5"></div>
+                  </div>
+                </div>
+
+                <div
+                  class="card ml-4 mt-5 bg-light border-dark mx-auto"
+                  style="width: 12rem"
+                >
+                  <div class="card-body">
+                    <h5 class="card-title mb-4 text-center text-secondary">
+                      WIND
+                    </h5>
+                    <p class="ml-5"><i class="fas fa-wind fa-2x"></i><br /></p>
+                    <p class="speed font-weight-bold h4 ml-4"></p>
+                  </div>
+                </div>
+              </div>
+              <!-- Bottom two cards -->
+              <div class="d-flex">
+                <div
+                  class="card ml-4 mt-5 mx-auto bg-light border-dark"
+                  style="width: 20rem"
+                >
+                  <div class="card-body">
+                    <div class="d-lg-flex">
+                      <div class="humidity1">
+                        <h5 class="card-title text-secondary">HUMIDITY</h5>
+                        <p class="humidity font-weight-bold h3 pb-3 ml-3"></p>
+                      </div>
+                      <div class="pressure1">
+                        <h5 class="card-title ml-5 text-secondary">PRESSURE</h5>
+                        <p class="pressure font-weight-bold h3 ml-4"></p>
+                      </div>
+                    </div>
+                    <div class="visibility1">
+                      <h5 class="ml-5 pl-3 text-secondary">VISIBILITY</h5>
+                      <p class="visibility ml-5 pl-4 font-weight-bold h3"></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!--  -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
